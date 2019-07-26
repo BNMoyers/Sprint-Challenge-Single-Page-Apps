@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import LocationCard from './LocationCard';
+import EpisodeCard from './EpisodeCard';
 import { Grid, Image } from 'semantic-ui-react'
 
-export default function LocationList() {
- const [locations, setLocations] = useState([]);
+export default function EpisodeList() {
+ const [episodes, setEpisodes] = useState([]);
 
   useEffect(() => {
     axios
-    .get("https://rickandmortyapi.com/api/location/")
+    .get("https://rickandmortyapi.com/api/episode/")
     .then(response => {
-      setLocations(response.data.results);
+      setEpisodes(response.data.results);
     })
     .catch(error => {
       console.error('error', error)
@@ -19,14 +19,14 @@ export default function LocationList() {
      }, [])
 
   return ( 
-  <section className='location-list grid-view'>
+  <section className='episode-list grid-view'>
     <Grid centered columns={3} >
-      {locations.map(results => (
+      {episodes.map(results => (
         <Grid.Column width={5}>
-          <LocationCard  
+          <EpisodeCard  
               name = {results.name}
-              dimension={results.dimension}
-              residents={results.residents.length}/>
+              airDate={results.air_date}
+              episodeNum ={results.episode}/>
               </Grid.Column>
 
       ))}
