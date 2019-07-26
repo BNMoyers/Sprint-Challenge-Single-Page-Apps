@@ -14,8 +14,8 @@ const createLabel = (iconName, labelText) => <span><Icon name={iconName} />{labe
 
 const welcomeLabel = createLabel("home", "Home Page")
 const characterLabel = createLabel("users", "Characters")
-const locationLabel = createLabel("users", "Locations")
-const episodeLabel = createLabel("users", "Episodes")
+const locationLabel = createLabel("globe", "Locations")
+const episodeLabel = createLabel("film", "Episodes")
 
 
 
