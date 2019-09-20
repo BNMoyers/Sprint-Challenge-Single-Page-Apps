@@ -25,24 +25,24 @@ In this challenge, you will create a Single Page Application complete with Clien
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 - [ ] Explain benefit(s) using `client-side routing`?
-> Answer:
+> Answer: Client-side routing is quicker and smoother, because it holds data in state instead of requesting the data from the server each time.
 - [ ] What does AJAX stand for?
-> Answer:
+> Answer: 'Asynchronous JavaScript and XML'
 - [ ] What are `controlled components` in React?
-> Answer:
+> Answer: controlled components have their state managed explicitly in our code through React.
 - [ ] Name three tools/libraries for making AJAX requests.
-> Answer:
+> Answer: Axios, JQuery, Fetch
 
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
+- [x] Create a forked copy of this project.
 - [ ] Add TL as collaborator on GitHub.
 - [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: `git checkout -b <firstName-lastName>`.
-- [ ] Implement the project on this branch, committing changes regularly.
+- [x] Create a new Branch on the clone: `git checkout -b <firstName-lastName>`.
+- [x] Implement the project on this branch, committing changes regularly.
 - [ ] Push commits: `git push origin <firstName-lastName>`.
 - [ ] **LOOK** at your project directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
 - [ ] **RUN** `yarn install` or `npm install` to retrieve the client-side dependencies.
