@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-export default function SearchForm({ onSearch }) {
+export default function SearchForm({ onSearch, characters }) {
+console.log('char', characters)
   const [query, setQuery] = useState({
     name: ""
   })
+  const [queryResults, setQueryResults] = useState([])
+  
   const handleInputChange = (event) => {
     setQuery({ ...query, name: event.target.value })
   }
+
+
+  // useEffect(() => {
+  //   const results = characters.filter( => .toLowerCase().includes(query))
+  // })  
 
   return (
     <section className="search-form">

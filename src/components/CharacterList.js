@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
 import { Grid, Image } from "semantic-ui-react";
+import SearchForm from './SearchForm'
 
 export default function CharacterList() {
   const [characters, setCharacters] = useState([]);
@@ -16,8 +17,10 @@ export default function CharacterList() {
         console.error("error:", error);
       });
   }, []);
-
+  console.log('name',)
   return (
+    <>
+    <section className='searchbox'>Find a Character: <SearchForm characters={[characters.name]}/></section>
     <section className="character-list grid-view">
       <Grid centered columns={3}>
         {characters.map(res => (
@@ -33,5 +36,6 @@ export default function CharacterList() {
         ))}
       </Grid>
     </section>
+    </>
   );
 }
