@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
 import { Grid, Image } from "semantic-ui-react";
-import { Link } from "react-router-dom";
 
 export default function CharacterList() {
   const [characters, setCharacters] = useState([]);
