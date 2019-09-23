@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-export default function SearchForm({ onSearch, characters }) {
-console.log('char', characters)
+export default function SearchForm({onSearch, characters}) {
+
   const [query, setQuery] = useState({
     name: ""
   })
@@ -12,9 +12,10 @@ console.log('char', characters)
   }
 
 
-  // useEffect(() => {
-  //   const results = characters.filter( => .toLowerCase().includes(query))
-  // })  
+  useEffect(() => {
+    console.log('characters', characters)
+    const results = characters.filter( character => character.name.includes(query))
+  })  
 
   return (
     <section className="search-form">

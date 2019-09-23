@@ -20,7 +20,7 @@ export default function CharacterList() {
   console.log('name',)
   return (
     <>
-    <section className='searchbox'>Find a Character: <SearchForm characters={[characters.name]}/></section>
+    <section className='searchbox'>Find a Character: <SearchForm characters={characters}/></section>
     <section className="character-list grid-view">
       <Grid centered columns={3}>
         {characters.map(res => (
